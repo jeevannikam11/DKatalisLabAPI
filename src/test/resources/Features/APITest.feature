@@ -16,4 +16,3 @@ Feature: A short description of the desired functionality
     Examples:
       | param | value1 | value2 |
       | page  | 1      | 2      |
-      | page  | 1      | 1      |
