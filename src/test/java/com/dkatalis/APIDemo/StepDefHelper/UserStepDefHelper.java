@@ -13,6 +13,8 @@ import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +22,8 @@ import java.util.List;
 import static io.restassured.config.EncoderConfig.encoderConfig;
 
 public class UserStepDefHelper {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserStepDefHelper.class);
 
     public Integer a = 0;
     public Integer b = 0;
@@ -64,6 +68,7 @@ public class UserStepDefHelper {
             String jsonString = response.asString();
             System.out.println("JSON Output is ::::::::::: " + jsonString);
             this.responseList.add(jsonString);
+            jsonString.length();
             return jsonString;
         } catch (Exception e) {
             System.out.println("Exception occurred in method :: " + e);
